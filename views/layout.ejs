@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title><%= title %></title>
+        <link rel='stylesheet' href='/css/bootstrap.css' />
+        <link rel='stylesheet' href='/css/styles.css' />
+    </head>
+    <body>
+    <div class="navbar">
+    	<div class="navbar-inner">
+    	    <div class="container">
+    	        <a class="brand" href="#">Express Todo</a>
+                    <ul class="nav">
+                    	<li class="active"><a href="#">Home</a></li>
+                    </ul>
+    	    </div>
+    	</div>
+    </div>
+    <div class="container">
+    	<%- body %>
+    </div>
+    </body>
+</html>

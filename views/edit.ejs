@@ -1,0 +1,24 @@
+<div class="page-header">
+	<h1><%= title %> <small>It's pretty nifty.</small></h1>
+</div>
+
+<form action="/create" method="post" accept-charset="utf-8">
+	<input type="text" name="content" autocomplete="off" placeholder="Create a new todo." />
+	<input type="submit" class="btn" value="Add" />
+</form>
+
+<h4>Current todos:</h4>
+<% todos.forEach(function(todo) { %>
+	<p>
+	    <span>
+			<% if(todo._id == current) { %>
+			<form action="/update/<%= todo._id %>" method="post" accept-charset="urf-8">
+				<input type="text" name="content" value="<%= todo.content %>" />
+				<a href="/destroy/<%= todo._id %>" title="Delete this todo item">Completed</a>
+			</form>
+			<% } else { %>
+				<a href="/edit/<%= todo._id %>" title="Update this todo item"><%= todo.content %></a>
+			<% } %>
+		</span>
+	</p>
+<% }); %>

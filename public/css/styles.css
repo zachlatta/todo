@@ -1,0 +1,28 @@
+[type=submit] {
+    margin-top: -10px;
+}
+
+.navbar-inner .container {
+    width: 960px;
+}
+
+.todo-item {
+    color: #333;
+}
+
+.todo-item:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.floater {
+    float: left;
+    height: 50%;
+    margin-bottom: -120px;
+}
+
+.vertical-center {
+    clear:both;
+    height:240px;
+    position:relative;
+}
